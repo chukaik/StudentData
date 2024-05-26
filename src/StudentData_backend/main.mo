@@ -1,5 +1,16 @@
+import Text "mo:base/Text";
 actor {
-  public query func greet(name : Text) : async Text {
-    return "Hello, " # name # "!";
+
+  type StudentData = {
+    name:Text;
+    favClub:Text;
+    university:Text;
+    favFramework:Text;
+    favIDE:Text;
+    favPL:Text;
+  };
+  
+  public query func register(data : StudentData) : async StudentData {
+    return data;
   };
 };
